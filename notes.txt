@@ -1,0 +1,134 @@
+server creration
+----------------
+
+1. create a folder for server
+
+    server
+       using node is called - express server
+       using fake server is called - json server
+
+we want: 
+    package.json 
+    node_modules
+
+2. create package.json file in node server
+    -> npm init
+
+3. Install json server
+    npm i json-server
+
+
+
+api request
+------------
+
+add video(title, cover image url, utibe url) - post
+access video - get
+add new category(category name) - post
+access category - get
+drag and drop - update category
+add history(date &time, title,videoUrl) - post
+access history -get
+video delet - id - delete
+category delete - id - delete
+history delete -id - delete
+
+
+API having two parts
+    Header - it send secret data
+    Body   - it send normal data
+
+    send the data in json format
+
+
+import
+-------
+
+import - provide top of the file
+require- we can use anywhere in a file
+
+CORS (Cross origin Resource sharing)
+------------------------------------
+Libarary used to connect front-end with server
+
+
+---------------------------------------------------------
+
+Data conversion (json-js) before resolving each api request
+
+
+
+middleware
+------------
+What Is Middleware? A request handler with access to the application's request-response cycle is known as middleware. It's a function that holds the request object, the response object, and the middleware function. Middleware can also send the response to the server before the request.
+
+type of middleware
+------------------
+1. application specific middleware -apply middleware for application bcz all request in that server app  need the middleware
+2. router specific middleware - apply middleware for only specific request that need middleware
+
+
+---------------------
+nodemon - provide automatic recompilation
+
+
+
+
+------------------------------
+
+drag and drop
+--------------
+
+onDragStart()
+dragOver() - check the item reach the destination
+onDrop()
+
+these three functions having target value
+
+
+
+
+
+update api
+------------
+
+method - PUT, PATCH
+json-server
+
+step 1: access data need to change
+
+    {
+      "categoryName": "Tending",
+      "video": [],
+      "id": 2
+    }
+
+
+
+step 2 : access video data to add in video array 
+
+    {
+      "title": "VIKRAM - OST Jukebox | Kamal Haasan | ANIRUDH RAVICHANDER | Vijay Sethupathi | Lokesh Kanagaraj",
+      "imageUrl": "image1.jpg",
+      "videoUrl": "https://www.youtube.com/embed/HZk&t=1353s",
+      "id": 4
+    }
+
+
+
+    step 3:add video in video array 
+    {
+      "categoryName": "Tending",
+      "video": [
+        {
+      "title": "VIKRAM - OST Jukebox | Kamal Haasan | ANIRUDH RAVICHANDER | Vijay Sethupathi | Lokesh Kanagaraj",
+      "imageUrl": "image1.jpg",
+      "videoUrl": "https://www.youtube.com/embed/HZk&t=1353s",
+      "id": 4
+    }
+      ],
+      "id": 2
+    }
+
+
+    step 4: 
